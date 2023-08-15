@@ -1,0 +1,251 @@
+:root {
+  --green-main: #46aa36;
+  /* COULD YOU FOR DARK MODE */
+  --black-main: #1d1d1d;
+  --white-main: #f5f5f7;
+  --green-secondary: #32b86f;
+
+  --font-main: "DM Sans", sans-serif;
+  --font-secondary: "League Gothic", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white-main);
+}
+
+.content-loaded {
+  position: absolute;
+  width: 85vw;
+  min-height: 100vh;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.project-name {
+  text-align: center;
+  font-size: 6vw;
+  color: var(--black-main);
+  font-family: var(--font-secondary);
+}
+
+.project-info-top {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-info-top video {
+  width: 40vw;
+}
+
+.project-overview-wrap {
+  background: var(--white-main);
+  box-shadow: 0px 4px 18px 1px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 40vw;
+}
+
+.project-overview-title {
+  color: var(--black-main);
+
+  font-family: var(--font-main);
+  font-size: 3vw;
+  font-weight: 600;
+  text-align: center;
+}
+
+.project-overview-description {
+  color: var(--black-main);
+
+  font-size: 1vw;
+  line-height: 1.4;
+  font-family: var(--font-main);
+  margin: auto;
+  width: 90%;
+}
+
+a {
+  display: inline-block;
+}
+
+.project-overview-btns {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.project-overview-btns button {
+  font-family: var(--font-main);
+  font-weight: bold;
+  font-size: 1.04vw;
+  padding: 0.4vh 1.3vw;
+  transition: 200ms;
+  margin-right: 1.04vw;
+  cursor: pointer;
+}
+
+.live-demo-btn {
+  color: var(--white-main);
+  background-color: var(--green-main);
+  border: 1px solid var(--green-main);
+}
+
+.code-btn {
+  background-color: transparent;
+  color: var(--black-main);
+  border: 1px solid;
+}
+
+.live-demo-btn:hover {
+  background-color: var(--white-main);
+  color: var(--green-main);
+}
+
+.code-btn:hover {
+  background-color: var(--black-main);
+  color: var(--white-main);
+}
+
+.project-info-bottom {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.project-technologies-title {
+  color: var(--black-main);
+
+  font-family: var(--font-main);
+  font-size: 3vw;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-tech-imgs-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-tech-img-wrap {
+  text-align: center;
+  width: 40%;
+  margin: 10px;
+}
+
+.project-tech-name {
+  color: var(--black-main);
+
+  font-family: var(--font-main);
+  font-size: 1vw;
+}
+
+.project-tech-img {
+  width: 2vw;
+}
+
+.project-goals-title,
+.ai-img-title {
+  color: var(--black-main);
+
+  font-family: var(--font-main);
+  font-size: 3vw;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ai-img-title {
+  font-size: 1.5vw;
+}
+
+.project-goal {
+  color: var(--black-main);
+
+  font-size: 1.5vw;
+  line-height: 1.4;
+  font-family: var(--font-main);
+  margin: auto;
+}
+
+.coming-soon {
+  color: red;
+  font-family: var(--font-main);
+  font-size: 6vw;
+  text-align: center;
+  margin: 5vw;
+}
+
+.phanthom-imgs {
+  margin-top: 50px;
+}
+
+.ai-gen-img {
+  width: 85vw;
+}
+
+@media (max-width: 705px) {
+  .project-name {
+    font-size: 10vw;
+    margin-top: 30px;
+  }
+
+  .project-info-top {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-info-top video {
+    width: 100%;
+    margin-bottom: 4vh;
+  }
+
+  .project-overview-wrap {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .project-overview-title,
+  .project-technologies-title,
+  .project-goals-title {
+    font-size: 6vw;
+    margin-bottom: 10px;
+  }
+
+  .ai-img-title {
+    font-size: 3vw;
+  }
+
+  .project-overview-description {
+    font-size: 3.4vw;
+    margin-bottom: 20px;
+  }
+
+  .project-overview-btns button {
+    font-size: 3vw;
+  }
+
+  .project-info-bottom {
+    flex-direction: column;
+  }
+
+  .project-tech-imgs-wrap {
+    /* width: 50%; */
+    margin: 20px 0;
+  }
+
+  .project-tech-img {
+    width: 10vw;
+  }
+
+  .project-goal {
+    font-size: 4vw;
+  }
+}
