@@ -1,6 +1,7 @@
 let paginationContainer = document.getElementById("pagination-wrapper");
 let upArrow = document.getElementById("return-home-ar");
 
+//pagination
 document.addEventListener("scroll", () => {
   if (scrollY >= window.innerHeight) {
     paginationContainer.style.position = "fixed";
@@ -16,20 +17,30 @@ let heroSubTitleSplitText = new SplitType("#hero-sub-title");
 gsap.registerPlugin(ScrollTrigger);
 
 const heroTimeLine = gsap.timeline({ defaults: { duration: 1 } });
-heroTimeLine
-  .to(heroTitleSplitText.chars, {
-    y: 0,
-    opacity: 1,
-    stagger: 0.04,
-    delay: 0.2,
-    duration: 0.01,
-  })
-  .to(heroSubTitleSplitText.chars, {
-    y: 0,
-    opacity: 1,
-    stagger: 0.02,
-    duration: 0.01,
-  });
+
+// HANDLE LOADING
+window.addEventListener("load", function () {
+  const loadingOverlay = document.getElementById("loading-overlay");
+  const content = document.getElementById("loaded-site");
+
+  loadingOverlay.style.display = "none";
+  content.style.display = "block";
+
+  heroTimeLine
+    .to(heroTitleSplitText.chars, {
+      y: 0,
+      opacity: 1,
+      stagger: 0.04,
+      delay: 0.2,
+      duration: 0.01,
+    })
+    .to(heroSubTitleSplitText.chars, {
+      y: 0,
+      opacity: 1,
+      stagger: 0.02,
+      duration: 0.01,
+    });
+});
 
 // ABOUT ME PAGINATION ANIMATION
 let paginationAboutMeText = new SplitType("#pagination-about-me");
